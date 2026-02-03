@@ -1,0 +1,60 @@
+/* article p{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+}
+
+article > p{
+    background-color: red;
+
+}
+
+article ~ p{
+    background-color: purple;
+    cololr: white;
+
+padding: 20px;
+
+}
+
+article + p{
+    background-color: orange;
+} */
+
+
+<input:out-of-range{
+    border:3px solid red;
+
+}
+form{
+    margin-top:20px;
+}
+input:invalid{
+    border:2px solid red;
+
+}
+input:valid{
+    border:2px solid green;
+
+}
+
+span:first-of-type{
+    background-color: ;
+}
+
+p::first-line{
+    color: blue;
+
+}
+p::first-letter{
+    font-size: 40px;
+}
+
+h1::before{
+    content: url(636047.png)
+}
+
+::selection{
+    color: white;
+    background-color: red;
+}
