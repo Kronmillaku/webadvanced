@@ -131,8 +131,8 @@ body{
     padding: 16px;
     text-decoration: none;
 }
-#
-vertical-menu li a.active {
+
+#vertical-menu li a.active {
     background-color: #04AA6D;
     color: white;
 }
