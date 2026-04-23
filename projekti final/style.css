@@ -95,6 +95,10 @@ table {
   overflow: hidden;
 }
 
+.container {
+    text-align: center;
+}
+
 thead {
   background: #334155;
 }
