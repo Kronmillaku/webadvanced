@@ -1,67 +1,59 @@
-// do while loop
+function validation(){
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var city = document.getElementById("city").value;
 
-var i = 0;
-do{
-  i = i + 1;
-  console.log(i);   
-}while(i < 5);
 
-console.log("-------------------------")
+var valid_name_regex = /^[A-Za-z]+$/;
+var valid_age_regex = /^[0-9]+$/;
 
-// while loop
 
-var j = 0;
-while(j < 5){
-    j = j + 1;
-    console.log(j);
+if(!(name.match(valid_name_regex)) || !(age.match(valid_age_regex)) || (city == "")){
+
+
+if(!(name.match(valid_name_regex))){
+    document.getElementById("name_error").style.visibility = "visible";
+    document.getElementById("name").style.borderColor = "red";
+}else{
+    document.getElementById("name_error").style.visibility = "hidden";
+    document.getElementById("name").style.borderColor = "black";
+    return false;
 }
 
-console.log("-------------")
 
-let n = 0;
-let x= 0;
-
-while(n < 3){
-    n++;
-    x += n;
-    console.log(n);
-    console.log(x);
+if(!(age.match(valid_age_regex))){
+    document.getElementById("age_error").style.visibility = "visible";
+    document.getElementById("age").style.borderColor = "red";
+}else{
+    document.getElementById("age_error").style.visibility = "hidden";
+    document.getElementById("age").style.borderColor = "black";
 }
 
-console.log("---------------");
+if(city == ""){
+    document.getElementById("city_error").style.visibility = "visible";
+    document.getElementById("city").style.borderColor = "red";
 
-//for loop
-
-for(var i = 3; i < 5;i++){
-    console.log("value of i is: " +i)
+}else{
+    document.getElementById("city_error").style.visibility = "hidden";
+    document.getElementById("city").style.borderColor = "black";
 }
 
-//for in
 
-var person = {firstName: "john",lastName: "Doe",age:25};
+return false;
 
-var text = '';
-var z;
 
-for(z in person){
-    text += person[z];
+}else{
+
+    document.getElementById("name_error").style.visibility = "hidden"
+    document.getElementById("name").style.borderColor = "black"
+     document.getElementById("age_error").style.visibility = "hidden";
+    document.getElementById("age").style.borderColor = "black";
+    document.getElementById("city_error").style.visibility = "hidden";
+    document.getElementById("city").style.borderColor = "black";
+    return true;
+
+
 }
 
-console.log(text);
 
-//for/of
-var names = ['steve','bill','mark'];
-
-var y;
-
-for(y of names){
-    console.log(y);
-}
-
-var text = "";
-
-var y;
-
-for(y of text){
-    console.log(y);
 }
